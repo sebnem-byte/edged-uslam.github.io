@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edged USLAM: Project Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Google Sans', sans-serif; padding: 50px; line-height: 1.6; }
+    .author { font-size: 1.2rem; color: #555; }
+    .btn-custom { background: #333; color: white; margin: 5px; border-radius: 20px; }
+    .table-container { margin-top: 40px; }
+    .header-center { text-align: center; margin-bottom: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-center">
+      <h1>Edged USLAM: Edge-Aware Event-Based SLAM <br> with Learning-Based Depth Priors</h1>
+      <p class="author">Şebnem Sarıözkan, Hürkan Şahin, Olaya Álvarez-Tuñón, Erdal Kayacan</p>
+      <p><b>Paderborn University</b> | ICRA 2026</p>
+      
+      <div>
+        <a href="#" class="btn btn-custom">Paper (PDF)</a>
+        <a href="https://github.com/kullaniciadin/edged-uslam" class="btn btn-custom">Code (GitHub)</a>
+        <a href="#dataset" class="btn btn-custom">Dataset</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Abstract</h3>
+        <p>Conventional visual SLAM algorithms often fail under rapid motion or low illumination. Edged USLAM introduces a hybrid visual-inertial system with an edge-aware frontend and a lightweight depth module...</p>
+      </div>
+    </div>
+
+    <div id="dataset" class="table-container">
+      <h3>Aerial Dataset</h3>
+      <p>Aşağıdaki sekanslar TESTUDO drone platformu ile toplanmıştır.</p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sequence Name</th>
+            <th>Type</th>
+            <th>Environment</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Circle_Flight_01</td>
+            <td>HDR</td>
+            <td>Indoor Lab</td>
+            <td><a href="GOOGLE_DRIVE_LINKIN">Download (ZIP)</a></td>
+          </tr>
+          <tr>
+            <td>Aggressive_Move</td>
+            <td>Rapid Motion</td>
+            <td>Low Light</td>
+            <td><a href="GOOGLE_DRIVE_LINKIN">Download (ZIP)</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
