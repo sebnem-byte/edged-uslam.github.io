@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Edged USLAM: Edge-Aware Event-Based SLAM</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <style>
-    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #fcfcfc; }
-    .header { padding: 60px 0; text-align: center; background: white; border-bottom: 1px solid #ddd; }
-    .btn-links { border-radius: 30px; margin: 10px; padding: 10px 25px; font-weight: bold; transition: 0.3s; }
-    .btn-links:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .section-title { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
-    .dataset-table th { background-color: #f8f9fa; }
-    pre { background: #f4f4f4; padding: 15px; border-radius: 5px; font-size: 0.9em; }
-  </style>
+    <meta charset="utf-8">
+    <title>Edged USLAM Project Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fafafa; color: #333; }
+        .header { padding: 80px 0 40px; text-align: center; background: white; border-bottom: 1px solid #eee; }
+        .author-list { font-size: 1.15rem; margin-bottom: 10px; }
+        .institution { color: #666; font-style: italic; }
+        .btn-links { border-radius: 5px; margin: 5px; font-weight: 600; background-color: #24292e; color: white; border: none; }
+        .btn-links:hover { background-color: #444; color: white; }
+        .section-title { font-weight: 700; border-bottom: 2px solid #333; display: inline-block; margin-bottom: 25px; padding-bottom: 5px; }
+        .content-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        img { max-width: 100%; height: auto; border-radius: 5px; margin: 20px 0; }
+        .dataset-btn { width: 100%; margin-bottom: 10px; font-weight: bold; }
+        pre { background: #f1f1f1; padding: 20px; border-radius: 8px; border-left: 5px solid #333; }
+    </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="container">
-    <h1 style="font-weight: 800;">Edged USLAM: Edge-Aware Event-Based SLAM <br> with Learning-Based Depth Priors</h1>
-    <p class="lead mt-3">Şebnem Sarıözkan<sup>1</sup>, Hürkan Şahin<sup>1</sup>, Olaya Álvarez-Tuñón<sup>2,3</sup>, Erdal Kayacan<sup>1</sup></p>
-    <p><sup>1</sup>Paderborn University | <sup>2</sup>EIVA A/S | <sup>3</sup>ITU Copenhagen</p>
-    <p class="text-primary" style="font-weight: bold;">ICRA 2026</p>
-    
-    <div class="mt-4">
-      <a href="#" class="btn btn-dark btn-links"><i class="fas fa-file-pdf"></i> Paper</a>
-      <a href="https://github.com/sebnem-byte/edged-uslam.github.io" class="btn btn-dark btn-links"><i class="fab fa-github"></i> Code</a>
-      <a href="https://drive.google.com/drive/folders/1-8claYmyLGgYQx-qvtIwEsolLxlgzXdc" class="btn btn-dark btn-links"><i class="fas fa-database"></i> Dataset</a>
-      <a href="#" class="btn btn-dark btn-links"><i class="fas fa-video"></i> Video</a>
+    <div class="container">
+        <h1 style="font-weight: 800; font-size: 2.8rem;">Edged USLAM: Edge-Aware Event-Based SLAM <br> with Learning-Based Depth Priors</h1>
+        <p class="author-list mt-4">Şebnem Sarıözkan, Hürkan Şahin, Olaya Álvarez-Tuñón, Erdal Kayacan</p>
+        <p class="institution">Paderborn University | ICRA 2026</p>
+        
+        <div class="mt-4">
+            <a href="https://github.com/sebnem-byte/edged-uslam.github.io" class="btn btn-links btn-lg"><i class="fab fa-github"></i> Code</a>
+            <a href="https://drive.google.com/drive/folders/1-8cIaYmyLGgYQx-qvtIwEsoILxlgzXdc" class="btn btn-links btn-lg"><i class="fas fa-database"></i> Full Dataset</a>
+            <a href="#" class="btn btn-links btn-lg"><i class="fas fa-file-pdf"></i> Paper</a>
+        </div>
     </div>
-  </div>
 </div>
 
-<div class="container mb-5">
-  <div class="row mt-5">
-    <div class="col-md-12">
-      <h3 class="section-title">Abstract</h3>
-      <p style="text-align: justify;">[cite: 3] Conventional visual SLAM often fails under rapid motion or low illumination. Edged USLAM presents a hybrid visual-inertial system that extends Ultimate SLAM with an edge-aware frontend and a lightweight depth module[cite: 5]. The frontend enhances event frames for robust feature tracking, while the depth module improves motion compensation and scale consistency[cite: 6].</p>
+<div class="container mt-5">
+    <div class="content-box">
+        <h3 class="section-title">Abstract</h3>
+        <p class="lead" style="text-align: justify; font-size: 1.1rem;">
+            Conventional visual SLAM algorithms often fail under rapid motion or low illumination. Edged USLAM introduces a hybrid visual-inertial system that extends Ultimate SLAM (USLAM) with an edge-aware frontend and a lightweight depth module. Our approach enhances event frames for robust feature tracking and provides region-of-interest based scene depth to improve motion compensation and scale consistency.
+        </p>
     </div>
-  </div>
 
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <h3 class="section-title">New Aerial Dataset</h3>
-      <p>We introduce a new aerial dataset featuring diverse motion and illumination conditions using the TESTUDO platform[cite: 40, 46, 172].</p>
-      <table class="table table-hover dataset-table">
-        <thead>
-          <tr>
-            <th>Sequence Name</th>
-            <th>Motion Type</th>
-            <th>Illumination</th>
-            <th>Download</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Circle</td>
-            <td>Circular [cite: 243]</td>
-            <td>Well-lit [cite: 280]</td>
-            <td><a href="https://drive.google.com/..." class="btn btn-sm btn-outline-primary">ZIP Link</a></td>
-          </tr>
-          <tr>
-            <td>Aggressive-Lowlit</td>
-            <td>Manual/Lateral [cite: 243]</td>
-            <td>Low-light [cite: 243]</td>
-            <td><a href="https://drive.google.com/..." class="btn btn-sm btn-outline-primary">ZIP Link</a></td>
-          </tr>
-          <tr>
-            <td>Dynamic HDR</td>
-            <td>Variable [cite: 243]</td>
-            <td>Switching Lights [cite: 245]</td>
-            <td><a href="https://drive.google.com/..." class="btn btn-sm btn-outline-primary">ZIP Link</a></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="content-box text-center">
+        <h3 class="section-title">System Architecture</h3>
+        <p>Overview of the Edged USLAM pipeline including Frontend, Backend, and Depth Module.</p>
+        <img src="system_architecture.png" alt="Edged USLAM Architecture">
     </div>
-  </div>
 
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <h3 class="section-title">BibTeX</h3>
-      <pre><code>@inproceedings{sariozkan2026edged,
+    <div class="content-box" id="dataset">
+        <h3 class="section-title">Aerial Dataset (TESTUDO Platform)</h3>
+        <p>We provide a comprehensive event-based dataset collected via our TESTUDO drone platform, covering various challenges:</p>
+        
+        <div class="row text-center">
+            <div class="col-md-4"><img src="drone_platform.png" alt="Drone"></div>
+            <div class="col-md-8">
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/drive/folders/1gbnptAY7kTaQxGk2xvs4qgE9pc1SB7E2" class="btn btn-outline-dark dataset-btn"><i class="fas fa-lightbulb"></i> Illumination Sequences</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/drive/folders/1wq1YUxDrUigJsaJeHJggCjt26LQTu5Lj" class="btn btn-outline-dark dataset-btn"><i class="fas fa-wind"></i> Motion Sequences</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/drive/folders/1v4m05BOzjTH57I9WF7OmJz7OxhMVNI05" class="btn btn-outline-dark dataset-btn"><i class="fas fa-filter"></i> Filtered Events</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/drive/folders/1t9eWzJxBVlUIcjprE70VTNnt5LjRHcaV" class="btn btn-outline-dark dataset-btn"><i class="fas fa-bolt"></i> Unfiltered Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-box text-center">
+        <h3 class="section-title">Tracking Performance</h3>
+        <img src="tracking_results.png" alt="Tracking Results">
+        <p class="mt-2 italic">Comparison of Edged USLAM tracking performance under aggressive circular maneuvers.</p>
+    </div>
+
+    <div class="content-box">
+        <h3 class="section-title">BibTeX</h3>
+        <pre><code>@inproceedings{sariozkan2026edged,
   title={Edged USLAM: Edge-Aware Event-Based SLAM with Learning-Based Depth Priors},
   author={Sarıözkan, Şebnem and Şahin, Hürkan and Álvarez-Tuñón, Olaya and Kayacan, Erdal},
   booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
   year={2026}
 }</code></pre>
     </div>
-  </div>
 </div>
+
+<footer class="text-center pb-5">
+    <p class="text-muted small">© 2026 Edged USLAM Project | Paderborn University</p>
+</footer>
 
 </body>
 </html>
